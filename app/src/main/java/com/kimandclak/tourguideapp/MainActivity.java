@@ -156,7 +156,7 @@ public class MainActivity extends AppCompatActivity {
                 case 1:
                     return new PlacesFragment();
                 case 2:
-                    return new Fragment();
+                    return new PhotosFragment();
                 default:
                     return null;
             }
