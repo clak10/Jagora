@@ -13,12 +13,45 @@
         <item name="windowNoTitle">true</item>
     </style>
 
-    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Dark.ActionBar" />
+    <style name="AppTheme.AppBarOverlay" parent="ThemeOverlay.AppCompat.Light" />
 
-    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Light" />
+    <style name="AppTheme.PopupOverlay" parent="ThemeOverlay.AppCompat.Dark" />
 
     <style name="section_headers" parent="Base.TextAppearance.AppCompat.Headline">
         <item name="android:textColor">@color/colorAccent</item>
+    </style>
+
+    <style name="TextAppearance.APP.CollapsingToolbar.Expanded" parent="TextAppearance.Design.CollapsingToolbar.Expanded">
+        <item name="android:textColor">#fff</item>
+    </style>
+
+    <style name="TextAppearance.App.Captions" parent="TextAppearance.AppCompat.Medium">
+        <item name="android:layout_marginTop">@dimen/spacing</item>
+        <item name="android:layout_marginBottom">@dimen/spacing</item>
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextAppearance.App.Descriptions" parent="TextAppearance.AppCompat.Body1">
+        <item name="android:layout_marginBottom">@dimen/spacing</item>
+        <item name="android:textColor">@color/colorAccent</item>
+    </style>
+
+    <style name="TextAppearance.App.Attractions.Title" parent="TextAppearance.App.Descriptions">
+        <item name="android:textColor">@color/colorAccent</item>
+        <item name="android:textStyle">bold</item>
+    </style>
+
+    <style name="TextAppearance.App.Attractions.Desc" parent="TextAppearance.App.Descriptions">
+
+    </style>
+
+    <style name="AppTheme.RatingBar" parent="android:Widget.RatingBar">
+        <item name="android:minHeight">16dp</item>
+        <item name="android:maxHeight">16dp</item>
+        <item name="android:isIndicator">true</item>
+        <item name="android:thumb">@null</item>
+
     </style>
 
 </resources>

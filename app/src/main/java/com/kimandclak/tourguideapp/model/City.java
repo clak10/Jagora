@@ -1,5 +1,6 @@
 package com.kimandclak.tourguideapp.model;
 
+import java.util.ArrayList;
 import java.util.List;
 
 public class City {
@@ -8,14 +9,23 @@ public class City {
     private int mDisplayPic;
     private String mDescription;
     private List<Attraction> mHighlights;
-    private List<Integer> mPhotos;
+    private ArrayList<Integer> mPhotos;
 
-    public City(String name, int displayPic, String description, List<Attraction> highlights, List<Integer> photos) {
+    public City(String name, int displayPic, String description, List<Attraction> highlights, ArrayList<Integer> photos) {
         mName = name;
         mDisplayPic = displayPic;
         mDescription = description;
-        mHighlights = mHighlights;
+        mHighlights = highlights;
+
         mPhotos = photos;
+    }
+
+    public String getName() {
+        return mName;
+    }
+
+    public void setName(String name) {
+        mName = name;
     }
 
     public int getDisplayPic() {
@@ -42,11 +52,11 @@ public class City {
         this.mHighlights = highlights;
     }
 
-    public List<Integer> getPhotos() {
+    public ArrayList<Integer> getPhotos() {
         return mPhotos;
     }
 
-    public void setPhotos(List<Integer> photos) {
+    public void setPhotos(ArrayList<Integer> photos) {
         this.mPhotos = photos;
     }
 }

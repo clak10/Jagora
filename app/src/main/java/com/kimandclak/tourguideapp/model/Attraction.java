@@ -1,17 +1,17 @@
 package com.kimandclak.tourguideapp.model;
 
-import java.util.List;
+import java.util.ArrayList;
 
 public class Attraction {
 
     private String mName;
     private int mDisplayPic;
     private String mDescription;
-    private List<Integer> mPhotos;
+    private ArrayList<Integer> mPhotos;
     private float mRating;
     private boolean mShowRating;
 
-    public Attraction(String name, int displayPic, String description, List<Integer> photos) {
+    public Attraction(String name, int displayPic, String description, ArrayList<Integer> photos) {
         mName = name;
         mDisplayPic = displayPic;
         mDescription = description;
@@ -20,7 +20,7 @@ public class Attraction {
         mShowRating = false;
     }
 
-    public Attraction(String name, int displayPic, String description, List<Integer> photos, float rating) {
+    public Attraction(String name, int displayPic, String description, ArrayList<Integer> photos, float rating) {
         mName = name;
         mDisplayPic = displayPic;
         mDescription = description;
@@ -53,11 +53,11 @@ public class Attraction {
         this.mDescription = mDescription;
     }
 
-    public List<Integer> getPhotos() {
+    public ArrayList<Integer> getPhotos() {
         return mPhotos;
     }
 
-    public void setPhotos(List<Integer> mPhotos) {
+    public void setPhotos(ArrayList<Integer> mPhotos) {
         this.mPhotos = mPhotos;
     }
 

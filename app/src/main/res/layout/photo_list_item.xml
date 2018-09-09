@@ -6,6 +6,9 @@
     <android.support.v7.widget.AppCompatImageView
         android:id="@+id/thumbnail"
         android:layout_width="@dimen/photo_list_item"
-        android:layout_height="@dimen/photo_list_item" />
-
+        android:layout_height="@dimen/photo_list_item"
+        android:layout_marginBottom="@dimen/spacing"
+        android:layout_marginEnd="@dimen/spacing"
+        android:layout_marginRight="@dimen/spacing"
+        android:scaleType="centerCrop" />
 </RelativeLayout>

@@ -33,12 +33,12 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
     public void onBindViewHolder(@NonNull ListAdapter.ViewHolder holder, int position) {
         // - get element from your dataset at this position
         // - replace the contents of the view with that element
-        Attraction att = mDataset.get(position);
-        holder.mImageView.setImageResource(att.getDisplayPic());
-        holder.mName.setText(att.getName());
-        holder.mDescription.setText(att.getDescription());
-        if (att.isShowRating())
-            holder.mRatingBar.setRating(att.getRating());
+        Attraction attraction = mDataset.get(position);
+        holder.mImageView.setImageResource(attraction.getDisplayPic());
+        holder.mName.setText(attraction.getName());
+        holder.mDescription.setText(attraction.getDescription());
+        if (attraction.isShowRating())
+            holder.mRatingBar.setRating(attraction.getRating());
         else
             holder.mRatingBar.setVisibility(View.INVISIBLE);
 
@@ -47,7 +47,7 @@ public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
 
     @Override
     public int getItemCount() {
-        return 0;
+        return mDataset.size();
     }
 
     // Provide a reference to the views for each data item

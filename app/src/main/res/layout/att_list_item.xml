@@ -1,21 +1,25 @@
 <?xml version="1.0" encoding="utf-8"?>
 <RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
-    android:layout_width="match_parent"
-    android:layout_height="match_parent">
+    android:layout_width="wrap_content"
+    android:layout_height="wrap_content"
+    android:layout_marginBottom="@dimen/spacing"
+    android:layout_marginRight="@dimen/edge_padding"
+    android:layout_marginTop="@dimen/spacing">
 
     <android.support.v7.widget.AppCompatImageView
         android:id="@+id/attraction_thumbnail"
-        android:layout_width="104dp"
-        android:layout_height="72dp"
+        android:layout_width="152dp"
+        android:layout_height="112dp"
         android:layout_alignParentLeft="true"
         android:layout_alignParentStart="true"
         android:layout_alignParentTop="true"
         android:layout_centerHorizontal="true"
-        android:layout_marginLeft="@dimen/left_margin"
-        android:layout_marginStart="@dimen/left_margin" />
+        android:layout_marginEnd="@dimen/spacing"
+        android:layout_marginRight="@dimen/spacing" />
 
     <android.support.v7.widget.AppCompatTextView
         android:id="@+id/att_name"
+        style="@style/TextAppearance.App.Attractions.Title"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
         android:layout_alignParentTop="true"
@@ -34,10 +38,17 @@
         android:id="@+id/rate_bar"
         android:layout_width="wrap_content"
         android:layout_height="wrap_content"
-        android:layout_alignParentEnd="true"
-        android:layout_alignParentRight="true"
+        android:layout_alignParentBottom="true"
         android:layout_below="@id/att_desc"
         android:layout_toEndOf="@id/attraction_thumbnail"
-        android:layout_toRightOf="@id/attraction_thumbnail" />
+        android:layout_toRightOf="@id/attraction_thumbnail"
+        android:indeterminateDrawable="@drawable/ratingbar_small_gold_star"
+        android:isIndicator="true"
+        android:maxHeight="@dimen/edge_padding"
+        android:minHeight="@dimen/edge_padding"
+        android:numStars="5"
+        android:progressDrawable="@drawable/ratingbar_small_gold_star"
+        android:stepSize="0.1"
+        android:thumb="@null" />
 
 </RelativeLayout>

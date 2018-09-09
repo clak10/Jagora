@@ -10,7 +10,7 @@ import java.util.List;
 public class DummyContent {
 
     public static City createData() {
-        List<Integer> photoIds = new ArrayList();
+        ArrayList<Integer> photoIds = new ArrayList<>();
         photoIds.add(R.drawable.place_holder);
         List<Attraction> attractions = new ArrayList<>();
         attractions.add(new Attraction("Plesure Park", R.drawable.place_holder, "RatingBar is used to get the rating from the app user. " +

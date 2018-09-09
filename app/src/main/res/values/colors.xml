@@ -1,6 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
 <resources>
-    <color name="colorPrimary">#FFF</color>
     <color name="colorPrimaryDark">@color/colorPrimary</color>
+    <color name="colorPrimary">#fff</color>
     <color name="colorAccent">#000</color>
+    <color name="colorSecondary">#000</color>
+    <color name="stars">#ba8001</color>
+    <color name="transparent">#00ffffff</color>
 </resources>
