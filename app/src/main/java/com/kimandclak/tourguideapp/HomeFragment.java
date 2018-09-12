@@ -1,5 +1,6 @@
 package com.kimandclak.tourguideapp;
 
+import android.content.Intent;
 import android.os.Bundle;
 import android.support.annotation.NonNull;
 import android.support.v4.app.Fragment;
@@ -15,7 +16,6 @@ import com.kimandclak.tourguideapp.model.Attraction;
 import com.kimandclak.tourguideapp.model.City;
 
 import java.util.ArrayList;
-import java.util.List;
 
 public class HomeFragment extends Fragment {
 
@@ -25,19 +25,6 @@ public class HomeFragment extends Fragment {
      * fragment.
      */
     public HomeFragment() {
-    }
-
-    public static City createData() {
-        ArrayList<Integer> photoIds = new ArrayList<>();
-        List<Attraction> attractions = new ArrayList<>();
-        for (int i = 0; i < 7; i++) {
-            photoIds.add(R.drawable.place_holder);
-            attractions.add(new Attraction("Plesure Park", R.drawable.place_holder, "This is the Hotel", photoIds));
-        }
-
-        return new City("Port Harcourt", R.drawable.place_holder, "RatingBar is used to get the rating from the app user. " +
-                "A user can simply touch, drag or click on the stars to set the rating value. " +
-                "The value of rating always returns a floating point number which may be 1.0, 2.5, 4.5 etc", attractions, photoIds);
     }
 
     @Override
@@ -50,7 +37,7 @@ public class HomeFragment extends Fragment {
         AppCompatTextView descriptions;
         AppCompatTextView photoLabel;
         AppCompatTextView attractionLabel;
-        ListAdapter listAdapter;
+        final ListAdapter listAdapter;
 
         descriptions = rootView.findViewById(R.id.city_desc);
         photoLabel = rootView.findViewById(R.id.photo_section_label);
@@ -70,15 +57,30 @@ public class HomeFragment extends Fragment {
 
         photoList.setLayoutManager(new LinearLayoutManager(getActivity(), LinearLayoutManager.HORIZONTAL, false));
 
-        City portHarcourt = createData();
+        final City city = MainActivity.getmCity();
 
-        descriptions.setText(portHarcourt.getDescription());
+        descriptions.setText(city.getDescription());
 
         // specify an adapters
-        PhotoListAdapter photoAdapter = new PhotoListAdapter(portHarcourt.getPhotos());
-        listAdapter = new ListAdapter(portHarcourt.getHighlights());
+        PhotoListAdapter photoAdapter = new PhotoListAdapter(city.getPhotos());
+        listAdapter = new ListAdapter(city.getHighlights());
         photoList.setAdapter(photoAdapter);
         attractionList.setAdapter(listAdapter);
+        attractionList.addOnItemTouchListener(new RecyclerTouchListener(getContext(), attractionList, new RecyclerTouchListener.ClickListener() {
+            @Override
+            public void onClick(View view, int position) {
+                Attraction attraction = city.getHighlights().get(position);
+                Intent i = new Intent(getActivity(), AttractionsInfoActivity.class);
+                i.putExtra("Attraction", attraction);
+                i.putIntegerArrayListExtra("Photos", attraction.getPhotos());
+                startActivity(i);
+            }
+
+            @Override
+            public void onLongClick(View view, int position) {
+
+            }
+        }));
 
         return rootView;
     }

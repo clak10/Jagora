@@ -9,7 +9,6 @@ import android.view.ViewGroup;
 
 import com.kimandclak.tourguideapp.model.Attraction;
 
-import java.util.ArrayList;
 import java.util.List;
 
 
@@ -30,33 +29,22 @@ public class PlacesFragment extends Fragment {
         View rootView = inflater.inflate(R.layout.fragment_places, container, false);
 
         RecyclerView hotelList = rootView.findViewById(R.id.hotel_list);
-        RecyclerView restaurant = rootView.findViewById(R.id.restaurant_list);
+        RecyclerView restaurantList = rootView.findViewById(R.id.restaurant_list);
 
         // improves performance since changes in content do not change the layout size of the RecyclerView
         hotelList.setHasFixedSize(true);
-        restaurant.setHasFixedSize(true);
+        restaurantList.setHasFixedSize(true);
 
-        List<Attraction> attractions = createData();
+        List<Attraction> hotels = MainActivity.getmCity().getHotels();
+        List<Attraction> restaurants = MainActivity.getmCity().getRestaurants();
 
 
-        ListAdapter hListAdapter = new ListAdapter(attractions);
+        ListAdapter hListAdapter = new ListAdapter(hotels);
         hotelList.setAdapter(hListAdapter);
-        ListAdapter rListAdapter = new ListAdapter(attractions);
-        restaurant.setAdapter(rListAdapter);
+        ListAdapter rListAdapter = new ListAdapter(restaurants);
+        restaurantList.setAdapter(rListAdapter);
 
         return rootView;
-    }
-
-    public List<Attraction> createData() {
-        ArrayList<Integer> photoIds = new ArrayList<>();
-        List<Attraction> attractions = new ArrayList<>();
-        for (int i = 0; i < 7; i++) {
-            float rating = (float) Math.abs(5.0 - 10.0 * Math.random());
-            photoIds.add(R.drawable.place_holder);
-            attractions.add(new Attraction("Plesure Park", R.drawable.place_holder, "This is the Hotel", photoIds, rating));
-        }
-
-        return attractions;
     }
 
 }

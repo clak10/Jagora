@@ -14,16 +14,13 @@ import android.support.v7.widget.Toolbar;
 import android.view.Menu;
 import android.view.MenuItem;
 
-import com.kimandclak.tourguideapp.model.Attraction;
+import com.kimandclak.tourguideapp.dummy.DummyContent;
 import com.kimandclak.tourguideapp.model.City;
-
-import java.util.ArrayList;
-import java.util.List;
 
 public class MainActivity extends AppCompatActivity {
 
     private static final int NUM_OF_PAGES = 3;
-    public static City portHarcourt;
+    public static City mCity;
     /**
      * The {@link android.support.v4.view.PagerAdapter} that will provide
      * fragments for each of the sections. We use a
@@ -40,33 +37,27 @@ public class MainActivity extends AppCompatActivity {
     private CollapsingToolbarLayout collapsingToolbarLayout;
     private AppCompatImageView mainDp;
 
-    public static City createData() {
-        ArrayList<Integer> photoIds = new ArrayList<>();
-        photoIds.add(R.drawable.place_holder);
-        List<Attraction> attractions = new ArrayList<>();
-        attractions.add(new Attraction("Plesure Park", R.drawable.place_holder, "RatingBar is used to get the rating from the app user. " +
-                "A user can simply touch, drag or click on the stars to set the rating value. " +
-                "The value of rating always returns a floating point number which may be 1.0, 2.5, 4.5 etc", photoIds));
-
-        return new City("Port Harcourt", R.drawable.place_holder, "This is Port Harcourt", attractions, photoIds);
+    public static City getmCity() {
+        return mCity;
     }
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_main);
 
-        portHarcourt = createData();
+        mCity = DummyContent.createData(this);
 
         collapsingToolbarLayout = findViewById(R.id.collapsing_toolbar);
-        collapsingToolbarLayout.setTitle(portHarcourt.getName());
+        collapsingToolbarLayout.setTitle(mCity.getName());
 
         mainDp = findViewById(R.id.main_display_pic);
-        mainDp.setImageResource(R.drawable.place_holder);
+        mainDp.setImageResource(mCity.getDisplayPicId());
 
         Toolbar toolbar = findViewById(R.id.toolbar);
         setSupportActionBar(toolbar);
-        toolbar.setTitle(portHarcourt.getName());
+        toolbar.setTitle(mCity.getName());
 
 
         // Create the adapter that will return a fragment for each of the three

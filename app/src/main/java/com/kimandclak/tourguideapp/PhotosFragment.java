@@ -11,6 +11,8 @@ import android.view.View;
 import android.view.ViewGroup;
 
 import java.util.ArrayList;
+import java.util.Collections;
+import java.util.List;
 
 
 /**
@@ -22,14 +24,6 @@ public class PhotosFragment extends Fragment {
     public PhotosFragment() {
     }
 
-    public static ArrayList<Integer> createData() {
-        ArrayList<Integer> photoIds = new ArrayList<>();
-        for (int i = 0; i < 7; i++) {
-            photoIds.add(R.drawable.place_holder);
-        }
-        return photoIds;
-    }
-
 
     @Override
     public View onCreateView(LayoutInflater inflater, ViewGroup container,
@@ -39,7 +33,10 @@ public class PhotosFragment extends Fragment {
 
         RecyclerView recyclerView = rootView.findViewById(R.id.photos);
 
-        LargePhotoAdapter largePhotoAdapter = new LargePhotoAdapter(createData());
+        ArrayList<Integer> myData = new ArrayList<>();
+        myData.addAll(MainActivity.getmCity().getPhotos());
+        Collections.shuffle(myData);
+        LargePhotoAdapter largePhotoAdapter = new LargePhotoAdapter(myData);
 
         recyclerView.setAdapter(largePhotoAdapter);
 
@@ -49,7 +46,7 @@ public class PhotosFragment extends Fragment {
 
     private static class LargePhotoAdapter extends RecyclerView.Adapter<LargePhotoAdapter.ViewHolder> {
 
-        private ArrayList<Integer> mDataset;
+        private List<Integer> mDataset;
 
         public LargePhotoAdapter(ArrayList<Integer> dataset) {
             mDataset = dataset;

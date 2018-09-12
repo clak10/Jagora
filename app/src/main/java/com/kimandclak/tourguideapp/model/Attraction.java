@@ -1,8 +1,14 @@
 package com.kimandclak.tourguideapp.model;
 
+import android.os.Parcel;
+import android.os.Parcelable;
+
 import java.util.ArrayList;
 
-public class Attraction {
+/**
+ * A class representing a place of interest in a mCity
+ */
+public class Attraction implements Parcelable {
 
     private String mName;
     private int mDisplayPic;
@@ -11,6 +17,26 @@ public class Attraction {
     private float mRating;
     private boolean mShowRating;
 
+    public static final Creator<Attraction> CREATOR = new Creator<Attraction>() {
+        @Override
+        public Attraction createFromParcel(Parcel in) {
+            return new Attraction(in);
+        }
+
+        @Override
+        public Attraction[] newArray(int size) {
+            return new Attraction[size];
+        }
+    };
+
+    /**
+     * Public constructors
+     *
+     * @param name        the name of the place
+     * @param displayPic  resource Id of the image used as man display
+     * @param description a short write up about the place
+     * @param photos      a list of resource Id for photos of the place
+     */
     public Attraction(String name, int displayPic, String description, ArrayList<Integer> photos) {
         mName = name;
         mDisplayPic = displayPic;
@@ -20,13 +46,29 @@ public class Attraction {
         mShowRating = false;
     }
 
-    public Attraction(String name, int displayPic, String description, ArrayList<Integer> photos, float rating) {
+    /**
+     * Public constructors for Attraction with rating
+     *
+     * @param name
+     * @param displayPic
+     * @param description
+     * @param rating
+     */
+    public Attraction(String name, int displayPic, String description, float rating) {
         mName = name;
         mDisplayPic = displayPic;
         mDescription = description;
-        mPhotos = photos;
+        mPhotos = null;
         mRating = rating;
         mShowRating = true;
+    }
+
+    protected Attraction(Parcel in) {
+        mName = in.readString();
+        mDisplayPic = in.readInt();
+        mDescription = in.readString();
+        mRating = in.readFloat();
+        mShowRating = in.readByte() != 0;
     }
 
     public String getName() {
@@ -75,5 +117,19 @@ public class Attraction {
 
     public void setShowRating(boolean showRating) {
         this.mShowRating = showRating;
+    }
+
+    @Override
+    public int describeContents() {
+        return 0;
+    }
+
+    @Override
+    public void writeToParcel(Parcel parcel, int i) {
+        parcel.writeString(mName);
+        parcel.writeInt(mDisplayPic);
+        parcel.writeString(mDescription);
+        parcel.writeFloat(mRating);
+        parcel.writeByte((byte) (mShowRating ? 1 : 0));
     }
 }

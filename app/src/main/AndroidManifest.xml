@@ -12,6 +12,7 @@
         <activity
             android:name=".MainActivity"
             android:label="@string/app_name"
+            android:launchMode="singleTop"
             android:theme="@style/AppTheme.NoActionBar">
             <intent-filter>
                 <action android:name="android.intent.action.MAIN" />
@@ -28,6 +29,10 @@
                 android:name="android.support.PARENT_ACTIVITY"
                 android:value="com.kimandclak.tourguideapp.MainActivity" />
         </activity>
+        <activity
+            android:name=".ImageEnlargeViewActivity"
+            android:label="@string/title_activity_Image_Enlarge_View"
+            android:theme="@style/AppTheme.DarkActionBar" />
     </application>
 
 </manifest>

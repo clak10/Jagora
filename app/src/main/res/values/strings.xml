@@ -9,10 +9,44 @@
     <string name="photos">Photos</string>
     <string name="photo_heading">Photos</string>
     <string name="attraction_heading">HighLights</string>
-
-    <!-- TODO: Remove or change this placeholder text -->
-    <string name="hello_blank_fragment">Hello blank fragment</string>
     <string name="hotels">Hotels</string>
     <string name="restaurant">Restaurant</string>
     <string name="title_activity_attractions_info">AttractionsInfoActivity</string>
+    <string name="reviews">Reviews</string>
+    <string name="title_activity_Image_Enlarge_View">Photo</string>
+    <string name="description_of_PHC">Port Harcourt is the capital and largest city of the oil rich Rivers State,
+        Nigeria. it is a tourist’s dream destination. The city has been transformed into a stunning
+        haven for business and tourism. With a wide variety of attractions and historical landmarks,
+        you can spend a month in the \'Garden city\' and not get bored. It lies along the Bonny
+        River and is located in the Niger Delta. As of 2016, the Port Harcourt urban area has an
+        estimated population of 1,865,000 inhabitants, up from 1,382,592 as of 2006.</string>
+    <string name="port_harcourt">Port Harcourt</string>
+    <string name="pleasure_park_description">Port Harcourt Pleasure Park is one of the major tourist
+        attraction of the city, it is a public recreation park in Rumuola, Port Harcourt, Rivers
+        State, Nigeria. It is located along Aba Road, near the 2nd Amphibious Brigade Barracks also
+        known as Bori Camp, Rumuola town on an expansive open land. The Park feature many
+        attractions such as climbing tower, pedal boats, mini golf fields, mini soccer fields,
+        playgrounds for different categories of children, fitness equipment and jogging areas,
+        shopping malls and restaurants.</string>
+    <string name="pleasure_park">Pleasure Park</string>
+    <string name="isaac_boro_park">Isaac Boro Park</string>
+    <string name="isaac_boro_decription">Isaac Boro Park is a public park and outdoor recreation area located along the Old GRA neighborhood of Rivers State capital, Port Harcourt. The park is dedicated to the evergreen memory of a Niger Delta hero and military icon- Maj. Isaac Jasper Adaka Boro. The park aside being open to the public is also used for government functions such as the Armed Forces Remembrance Day, Workers Day events and National Youth Service Corp send-off parade. The park provides tourists the convenience of observing moments of the urban dwellers going about their usual business while they bask in the sweet calmness the park renders.</string>
+    <string name="port_harcourt_zoo">Port Harcourt Zoo</string>
+    <string name="ph_zoo_description">The Port Harcourt zoo, which was officially opened to the public on October 1, 1975, is a state owned zoological park situated within the Trans Amadi area of Port Harcourt. The zoo is home to many fauna species such as lions, gazelle, cobra, peacock, monkeys, chimpanzees, turtles, crocodiles, ostriches, donkeys and many bird species. It is a family friendly environment where tourists and animal-lovers can experience these rarely seen creatures.</string>
+    <string name="port_harcourt_mall">Port Harcourt Mall</string>
+    <string name="ph_mall_decription">The Port Harcourt Mall is the largest Mall in Port Harcourt spreading over 16,300 sqm of retail space with over 50 brands that hold stock of Groceries, Fashion, Electronics, Food and Multiplex and many more. The mall has a large play area with arcades games and rides for kids. It also has a cinemas for the movie lovers. The Port Harcourt Mall is a great place for shopping and family entertainment.</string>
+    <string name="novotel">Hotel Novotel Port Harcourt</string>
+    <string name="novotel_details">Address: 3 Stadium Rd, Rumuola, Port Harcourt Phone: 0703 525 8639</string>
+    <string name="le_meridien_details">Address: 45 Tombia Street, GRA Phase II, 021189, Port Harcourt Phone: 084 461 770</string>
+    <string name="le_meridien">Le Méridien Ogeyi Place</string>
+    <string name="hotel_presidential">Hotel Presidential</string>
+    <string name="hotel_presidential_details">Address: Aba Road Street, Rurome-Rezigbu 500272, Port Harcourt, Rivers Phone: 0816 885 5535</string>
+    <string name="golden_tulip_phc">Golden Tulip Port Harcourt</string>
+    <string name="golden_tulip_phc_details">Address: 1C Evo Road, Elechi 500001, Port Harcourt Phone: 084 463 401</string>
+    <string name="asia_town_details">Asia Town is a restaurant and event venue. The establishment has a seating capacity of 500 guests and serves mostly Chinese cuisine, Indian cuisine, Thai cuisine, and some Nigerian dishes. Address: 38 Forces Ave, Orogbum, Port Harcourt Hours: Open ⋅ Closes 10:30PM Phone: 0810 662 2000</string>
+    <string name="asia_town">Asia Town</string>
+    <string name="charcoal_and_spice">Charcoal and Spice serves African and continental dishes Address: 1 King Perekule St GRA, Phase 2, Elechi 500272, Port Harcourt, Rivers Hours: Open ⋅ Closes 10PM Phone: 0803 339 4212</string>
+    <string name="charcoal_and_spice_phc">Charcoal and Spice Restaurant Port Harcourt</string>
+    <string name="jevinik">Jevinik Restaurant</string>
+    <string name="jevinik_details">Jevinik is open 24/7 and serves Chinese cuisine, African and continental dishes. Address: 57 Tombia St, Elechi 500272, Port Harcourt Hours: Open 24 hours Phone: 0703 724 6570</string>
 </resources>
