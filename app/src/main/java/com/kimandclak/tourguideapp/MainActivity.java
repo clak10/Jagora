@@ -83,7 +83,7 @@ public class MainActivity extends AppCompatActivity {
                     tabLayout.setTabTextColors(0xFFA7A6A7, 0xFF000000);
                     tabLayout.setSelectedTabIndicatorColor(0xFF000000);
                 } else {
-                    tabLayout.setTabTextColors(0xFF494949, 0xFFFFFFFF);
+                    tabLayout.setTabTextColors(0xFF1B1A1A, 0xFFFFFFFF);
                     tabLayout.setSelectedTabIndicatorColor(0xFFFFFFFF);
                 }
             }
@@ -131,7 +131,7 @@ public class MainActivity extends AppCompatActivity {
      * one of the sections/tabs/pages.
      */
     public class SectionsPagerAdapter extends FragmentPagerAdapter {
-        private final String tabTitles[] = new String[]{"Explore", "Places", "Photos"};
+        private final String tabTitles[] = new String[]{"Explore", "Places", "Gallery"};
 
         public SectionsPagerAdapter(FragmentManager fm) {
             super(fm);

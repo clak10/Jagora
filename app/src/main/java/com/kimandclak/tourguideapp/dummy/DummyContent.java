@@ -36,7 +36,7 @@ public class DummyContent {
                         R.drawable.hotel03, context.getString(R.string.hotel_presidential_details),
                         4.2f),
                 new Attraction(context.getString(R.string.golden_tulip_phc),
-                        R.drawable.hotel03, context.getString(R.string.golden_tulip_phc_details),
+                        R.drawable.hotel04, context.getString(R.string.golden_tulip_phc_details),
                         3.9f));
 
         List<Attraction> restaurants = Arrays.asList(new Attraction(context.getString(R.string.asia_town),
@@ -47,7 +47,15 @@ public class DummyContent {
                 R.drawable.res03, context.getString(R.string.jevinik_details),
                 4.2f));
 
+        List<Attraction> shoppingMalls = Arrays.asList(new Attraction(context.getString(R.string.port_harcourt_mall),
+                R.drawable.phm01, context.getString(R.string.ph_mall_address),
+                4.0f), new Attraction(context.getString(R.string.everyday_emporium),
+                R.drawable.sm01, context.getString(R.string.everday_emporium_address),
+                3.9f), new Attraction(context.getString(R.string.vineyard_shopping_center),
+                R.drawable.sm02, context.getString(R.string.vineyard_shopping_center_address),
+                3.8f));
+
         return new City(context.getString(R.string.port_harcourt), R.drawable.ph_cover,
-                context.getString(R.string.description_of_PHC), new double[]{4.77742, 7.0134}, attractions, hotels, restaurants);
+                context.getString(R.string.description_of_PHC), new double[]{4.77742, 7.0134}, attractions, hotels, restaurants, shoppingMalls);
     }
 }

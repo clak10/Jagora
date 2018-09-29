@@ -15,27 +15,32 @@ public class City {
     private List<Attraction> mHighlights;
     private List<Attraction> mHotels;
     private List<Attraction> mRestaurants;
+    private List<Attraction> mShoppingMalls;
     private ArrayList<Integer> mPhotos;
 
 
     /**
      * Public constructors
      *
-     * @param name        the name of the mCity.
-     * @param displayPic  resource Id of the image used as main display.
-     * @param description a short write up about the mCity.
-     * @param location    an array contain Longitude and Latitude.
-     * @param highlights  a list of major attractions in the mCity.
-     * @param hotels      a list of some top hotels in the mCity.
-     * @param restaurants a list of some of the top restaurants  in the mCity.
+     * @param name          the name of the mCity.
+     * @param displayPic    resource Id of the image used as main display.
+     * @param description   a short write up about the mCity.
+     * @param location      an array contain Longitude and Latitude.
+     * @param highlights    a list of major attractions in the mCity.
+     * @param hotels        a list of some top hotels in the mCity.
+     * @param restaurants   a list of some of the top restaurants  in the mCity.
+     * @param shoppingMalls a list of some of the top rated shopping mall in the mCity.
      */
-    public City(String name, int displayPic, String description, double[] location, List<Attraction> highlights, List<Attraction> hotels, List<Attraction> restaurants) {
+    public City(String name, int displayPic, String description, double[] location,
+                List<Attraction> highlights, List<Attraction> hotels, List<Attraction> restaurants, List<Attraction> shoppingMalls) {
         mName = name;
+
         mDisplayPic = displayPic;
         mDescription = description;
         mHighlights = highlights;
         mHotels = hotels;
         mRestaurants = restaurants;
+        mShoppingMalls = shoppingMalls;
         mLocation = location;
         mPhotos = new ArrayList<>();
         addPhotos(highlights);
@@ -91,6 +96,10 @@ public class City {
         return mPhotos;
     }
 
+    public void setPhotos(ArrayList<Integer> photos) {
+        this.mPhotos = photos;
+    }
+
     public List<Attraction> getHotels() {
         return mHotels;
     }
@@ -107,7 +116,11 @@ public class City {
         this.mRestaurants = restaurants;
     }
 
-    public void setPhotos(ArrayList<Integer> photos) {
-        this.mPhotos = photos;
+    public List<Attraction> getShoppingMalls() {
+        return mShoppingMalls;
+    }
+
+    public void setShoppingMalls(List<Attraction> shoppingMalls) {
+        this.mShoppingMalls = shoppingMalls;
     }
 }

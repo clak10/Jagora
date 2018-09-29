@@ -10,13 +10,6 @@ import java.util.ArrayList;
  */
 public class Attraction implements Parcelable {
 
-    private String mName;
-    private int mDisplayPic;
-    private String mDescription;
-    private ArrayList<Integer> mPhotos;
-    private float mRating;
-    private boolean mShowRating;
-
     public static final Creator<Attraction> CREATOR = new Creator<Attraction>() {
         @Override
         public Attraction createFromParcel(Parcel in) {
@@ -28,6 +21,12 @@ public class Attraction implements Parcelable {
             return new Attraction[size];
         }
     };
+    private String mName;
+    private int mDisplayPic;
+    private String mDescription;
+    private ArrayList<Integer> mPhotos;
+    private float mRating;
+    private boolean mShowRating;
 
     /**
      * Public constructors

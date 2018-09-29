@@ -13,6 +13,9 @@ import com.kimandclak.tourguideapp.model.Attraction;
 
 import java.util.List;
 
+/**
+ * A custom class that extends RecyclerView.Adapter
+ */
 public class ListAdapter extends RecyclerView.Adapter<ListAdapter.ViewHolder> {
     private List<Attraction> mDataset;
 

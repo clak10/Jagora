@@ -30,19 +30,23 @@ public class PlacesFragment extends Fragment {
 
         RecyclerView hotelList = rootView.findViewById(R.id.hotel_list);
         RecyclerView restaurantList = rootView.findViewById(R.id.restaurant_list);
+        RecyclerView shopMallList = rootView.findViewById(R.id.shopping_mall_list);
 
         // improves performance since changes in content do not change the layout size of the RecyclerView
         hotelList.setHasFixedSize(true);
         restaurantList.setHasFixedSize(true);
+        shopMallList.setHasFixedSize(true);
 
         List<Attraction> hotels = MainActivity.getmCity().getHotels();
         List<Attraction> restaurants = MainActivity.getmCity().getRestaurants();
-
+        List<Attraction> shoppingMalls = MainActivity.getmCity().getShoppingMalls();
 
         ListAdapter hListAdapter = new ListAdapter(hotels);
         hotelList.setAdapter(hListAdapter);
         ListAdapter rListAdapter = new ListAdapter(restaurants);
         restaurantList.setAdapter(rListAdapter);
+        ListAdapter sListAdapter = new ListAdapter(shoppingMalls);
+        shopMallList.setAdapter(sListAdapter);
 
         return rootView;
     }

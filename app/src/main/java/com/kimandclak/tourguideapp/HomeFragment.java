@@ -16,9 +16,9 @@ import com.kimandclak.tourguideapp.model.Attraction;
 import com.kimandclak.tourguideapp.model.City;
 
 import java.util.ArrayList;
+import java.util.Collections;
 
 public class HomeFragment extends Fragment {
-
 
     /**
      * Mandatory empty constructor for the fragment manager to instantiate the
@@ -61,8 +61,12 @@ public class HomeFragment extends Fragment {
 
         descriptions.setText(city.getDescription());
 
+        ArrayList<Integer> myData = new ArrayList<>();
+        myData.addAll(city.getPhotos());
+        Collections.shuffle(myData);
+
         // specify an adapters
-        PhotoListAdapter photoAdapter = new PhotoListAdapter(city.getPhotos());
+        PhotoListAdapter photoAdapter = new PhotoListAdapter(myData);
         listAdapter = new ListAdapter(city.getHighlights());
         photoList.setAdapter(photoAdapter);
         attractionList.setAdapter(listAdapter);

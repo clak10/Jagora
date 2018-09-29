@@ -33,6 +33,8 @@ public class AttractionsInfoActivity extends AppCompatActivity {
 
         Attraction attraction = getIntent().getParcelableExtra("Attraction");
 
+        setTitle(attraction.getName());
+
         AppCompatImageView dp = findViewById(R.id.main_display_pic);
         dp.setImageResource(attraction.getDisplayPic());
 
@@ -63,6 +65,7 @@ public class AttractionsInfoActivity extends AppCompatActivity {
 
                 photo.setOnClickListener(e -> {
                     Intent intent = new Intent(this, ImageEnlargeViewActivity.class);
+                    intent.putExtra("Title", attraction.getName());
                     intent.putExtra("Image_ID", photos.get(photo));
                     startActivity(intent);
                 });

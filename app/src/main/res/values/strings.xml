@@ -1,5 +1,5 @@
 <resources>
-    <string name="app_name">Tour Guide  APP</string>
+    <string name="app_name">Jagora</string>
     <string name="tab_text_1">Tab 1</string>
     <string name="tab_text_2">Tab 2</string>
     <string name="tab_text_3">Tab 3</string>
@@ -36,17 +36,23 @@
     <string name="port_harcourt_mall">Port Harcourt Mall</string>
     <string name="ph_mall_decription">The Port Harcourt Mall is the largest Mall in Port Harcourt spreading over 16,300 sqm of retail space with over 50 brands that hold stock of Groceries, Fashion, Electronics, Food and Multiplex and many more. The mall has a large play area with arcades games and rides for kids. It also has a cinemas for the movie lovers. The Port Harcourt Mall is a great place for shopping and family entertainment.</string>
     <string name="novotel">Hotel Novotel Port Harcourt</string>
-    <string name="novotel_details">Address: 3 Stadium Rd, Rumuola, Port Harcourt Phone: 0703 525 8639</string>
-    <string name="le_meridien_details">Address: 45 Tombia Street, GRA Phase II, 021189, Port Harcourt Phone: 084 461 770</string>
+    <string name="novotel_details">Address: 3 Stadium Rd, Rumuola, Port Harcourt | Phone: 0703 525 8639</string>
+    <string name="le_meridien_details">Address: 45 Tombia Street, GRA Phase II, 021189, Port Harcourt | Phone: 084 461 770</string>
     <string name="le_meridien">Le Méridien Ogeyi Place</string>
     <string name="hotel_presidential">Hotel Presidential</string>
-    <string name="hotel_presidential_details">Address: Aba Road Street, Rurome-Rezigbu 500272, Port Harcourt, Rivers Phone: 0816 885 5535</string>
+    <string name="hotel_presidential_details">Address: Aba Road Street, Rurome-Rezigbu 500272, Port Harcourt, Rivers | Phone: 0816 885 5535</string>
     <string name="golden_tulip_phc">Golden Tulip Port Harcourt</string>
-    <string name="golden_tulip_phc_details">Address: 1C Evo Road, Elechi 500001, Port Harcourt Phone: 084 463 401</string>
-    <string name="asia_town_details">Asia Town is a restaurant and event venue. The establishment has a seating capacity of 500 guests and serves mostly Chinese cuisine, Indian cuisine, Thai cuisine, and some Nigerian dishes. Address: 38 Forces Ave, Orogbum, Port Harcourt Hours: Open ⋅ Closes 10:30PM Phone: 0810 662 2000</string>
+    <string name="golden_tulip_phc_details">Address: 1C Evo Road, Elechi 500001, Port Harcourt | Phone: 084 463 401</string>
+    <string name="asia_town_details">Serves Chinese cuisine and Indian cuisine. | Address: 38 Forces Ave, Orogbum, Port Harcourt | Phone: 0810 662 2000</string>
     <string name="asia_town">Asia Town</string>
-    <string name="charcoal_and_spice">Charcoal and Spice serves African and continental dishes Address: 1 King Perekule St GRA, Phase 2, Elechi 500272, Port Harcourt, Rivers Hours: Open ⋅ Closes 10PM Phone: 0803 339 4212</string>
+    <string name="charcoal_and_spice">Serves African and continental dishes | Address: 1 King Perekule St, GRA Phase 2, Port Harcourt | Phone: 0803 339 4212</string>
     <string name="charcoal_and_spice_phc">Charcoal and Spice Restaurant Port Harcourt</string>
     <string name="jevinik">Jevinik Restaurant</string>
-    <string name="jevinik_details">Jevinik is open 24/7 and serves Chinese cuisine, African and continental dishes. Address: 57 Tombia St, Elechi 500272, Port Harcourt Hours: Open 24 hours Phone: 0703 724 6570</string>
+    <string name="jevinik_details">Open 24/7 and serves Chinese and African dishes. | Address: 57 Tombia St, Elechi, Port Harcourt | Phone: 0703 724 6570</string>
+    <string name="ph_mall_address">Address: 1 Azikiwe Rd, Port Harcourt</string>
+    <string name="everyday_emporium">Everyday Emporium</string>
+    <string name="everday_emporium_address">Address: Rumuola 500272, Port Harcourt</string>
+    <string name="vineyard_shopping_center">The Vineyard Shopping Center</string>
+    <string name="vineyard_shopping_center_address">Address: 88 Woji Road, GRA Phase 2 500271, Port Harcourt</string>
+    <string name="shopping_mall">Shopping Malls</string>
 </resources>
